@@ -47,7 +47,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Tap once on your favourite genres"
+            android:text="Tap once on your five favourite genres"
             android:textColor="#6e7179"
             android:textStyle="bold"
             android:textSize="16sp"
@@ -56,10 +56,324 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="500dp"
         android:layout_height="0dp"
-        android:layout_weight="2.4">
+        android:layout_weight="2"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_gravity="center">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <HorizontalScrollView
+                android:id="@+id/hscrollview1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:scrollbars="none"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btn_select1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/btn_select_background_gray"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:text="INDIE ROCK"
+                        android:textColor="#adb0b5"
+                        android:textSize="14sp"/>
+
+                    <Button
+                        android:id="@+id/btn_select2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/btn_select_background_gray"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:orientation="vertical"
+                        android:text="DEEP HOUSE"
+                        android:textColor="#adb0b5"
+                        android:textSize="14sp"/>
+
+                    <Button
+                        android:id="@+id/btn_select3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/btn_select_background_gray"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:text="HIP-HOP"
+                        android:textColor="#adb0b5"
+                        android:textSize="14sp"/>
+
+                    <Button
+                        android:id="@+id/btn_select4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/btn_select_background_gray"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:text="NU METAL"
+                        android:textColor="#adb0b5"
+                        android:textSize="14sp"/>
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <HorizontalScrollView
+                android:id="@+id/hscrollview2"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:scrollbars="none"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btn_select5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/btn_select_background_gray"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:text="ELECTRONICA"
+                        android:textColor="#adb0b5"
+                        android:textSize="14sp"/>
+
+                    <Button
+                        android:id="@+id/btn_select6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/btn_select_background_gray"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:orientation="vertical"
+                        android:text="EDM"
+                        android:textColor="#adb0b5"
+                        android:textSize="14sp"/>
+
+                    <Button
+                        android:id="@+id/btn_select7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/btn_select_background_gray"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:text="HOUSE"
+                        android:textColor="#adb0b5"
+                        android:textSize="14sp"/>
+
+                    <Button
+                        android:id="@+id/btn_select8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/btn_select_background_gray"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:text="HARDCORE"
+                        android:textColor="#adb0b5"
+                        android:textSize="14sp"/>
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <HorizontalScrollView
+                android:id="@+id/hscrollview3"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:scrollbars="none"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btn_select9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/btn_select_background_gray"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:text="BALAD"
+                        android:textColor="#adb0b5"
+                        android:textSize="14sp"/>
+
+                    <Button
+                        android:id="@+id/btn_select10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/btn_select_background_gray"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:orientation="vertical"
+                        android:text="TRAP"
+                        android:textColor="#adb0b5"
+                        android:textSize="14sp"/>
+
+                    <Button
+                        android:id="@+id/btn_select11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/btn_select_background_gray"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:text="EUROBEAT"
+                        android:textColor="#adb0b5"
+                        android:textSize="14sp"/>
+
+                    <Button
+                        android:id="@+id/btn_select12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/btn_select_background_gray"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:text="CHANSON"
+                        android:textColor="#adb0b5"
+                        android:textSize="14sp"/>
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <HorizontalScrollView
+                android:id="@+id/hscrollview4"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:scrollbars="none"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btn_select13"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/btn_select_background_gray"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:text="MINIMAL"
+                        android:textColor="#adb0b5"
+                        android:textSize="14sp"/>
+
+                    <Button
+                        android:id="@+id/btn_select14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/btn_select_background_gray"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:orientation="vertical"
+                        android:text="NEW METAL"
+                        android:textColor="#adb0b5"
+                        android:textSize="14sp"/>
+
+                    <Button
+                        android:id="@+id/btn_select15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/btn_select_background_gray"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:text="LOUNGE"
+                        android:textColor="#adb0b5"
+                        android:textSize="14sp"/>
+
+                    <Button
+                        android:id="@+id/btn_select16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/btn_select_background_gray"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:text="COUNTRY POP"
+                        android:textColor="#adb0b5"
+                        android:textSize="14sp"/>
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <HorizontalScrollView
+                android:id="@+id/hscrollview5"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:scrollbars="none"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btn_select17"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/btn_select_background_gray"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:text="FUNK"
+                        android:textColor="#adb0b5"
+                        android:textSize="14sp"/>
+
+                    <Button
+                        android:id="@+id/btn_select18"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/btn_select_background_gray"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:orientation="vertical"
+                        android:text="CLASSICAL"
+                        android:textColor="#adb0b5"
+                        android:textSize="14sp"/>
+
+                    <Button
+                        android:id="@+id/btn_select19"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/btn_select_background_gray"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:text="BOSSA NOVA"
+                        android:textColor="#adb0b5"
+                        android:textSize="14sp"/>
+
+                    <Button
+                        android:id="@+id/btn_select20"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/btn_select_background_gray"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:text="BLUES"
+                        android:textColor="#adb0b5"
+                        android:textSize="14sp"/>
+                </LinearLayout>
+            </HorizontalScrollView>
+
+        </LinearLayout>
     </LinearLayout>
 
     <LinearLayout
@@ -72,28 +386,26 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_above="@id/btn_next"
-                android:layout_centerHorizontal="true"
-                android:text="All good! Press &quot;next&quot; to continue"
-                android:textColor="#6e7179"
-                android:textSize="12sp"
-                android:textStyle="bold" />
-
             <Button
                 android:id="@+id/btn_next"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
-
                 android:layout_alignParentBottom="true"
                 android:layout_margin="20dp"
                 android:background="@drawable/btn_next_background"
                 android:text="NEXT"
                 android:textColor="#ffffff" />
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_above="@id/btn_next"
+                android:text="All good! Press &quot;next&quot; to continue"
+                android:textColor="#6e7179"
+                android:textSize="12sp"
+                android:textStyle="bold" />
 
         </RelativeLayout>
 

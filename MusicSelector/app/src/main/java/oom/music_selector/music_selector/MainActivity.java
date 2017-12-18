@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             @Override
             public  void run() {
                 // TODO Auto-generated method stub
-                hScrollView2.scrollTo(130, 0);
+                hScrollView2.scrollTo(120, 0);
             }
         });
 
@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             @Override
             public void run() {
                 // TODO Auto-generated method stub
-                hScrollView3.scrollTo(70, 0);
+                hScrollView3.scrollTo(230, 0);
             }
         });
 
@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             @Override
             public void run() {
                 // TODO Auto-generated method stub
-                hScrollView4.scrollTo(70, 0);
+                hScrollView4.scrollTo(280, 0);
             }
         });
 
@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             @Override
             public void run() {
                 // TODO Auto-generated method stub
-                hScrollView5.scrollTo(100, 0);
+                hScrollView5.scrollTo(170, 0);
             }
         });
 
@@ -116,15 +116,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View view) {
         count++;
-        Log.d("count", count+"");
 
         int intID = view.getId();
         Button button = (Button) findViewById(intID);
         String message = button.getText().toString();
-        Log.d("what-clicked", message);
 
         clikedBtnList.add(message);
-        Log.d("list", clikedBtnList.toString());
 
         if(count == 1) {
             String value = clikedBtnList.get(0);

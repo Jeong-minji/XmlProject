@@ -35,7 +35,7 @@
                     android:text="MY MUSIC"
                     android:textColor="@color/colorWhite"
                     android:textStyle="bold"
-                    android:textSize="16sp"
+                    android:textSize="17sp"
                     android:layout_centerInParent="true"/>
 
                 <ImageView
@@ -46,8 +46,6 @@
                     android:layout_marginRight="16dp"
                     android:layout_centerVertical="true"/>
             </RelativeLayout>
-
-
         </LinearLayout>
     </android.support.v7.widget.Toolbar>
 
@@ -69,14 +67,49 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.5">
+        android:layout_weight="0.5"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/music_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Something Just Like This"
+            android:textColor="@color/colorWhite"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/music_artist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="The ChainSmokers &amp; Coldplay"
+            android:textColor="#A7AAB9"
+            android:textSize="14sp"
+            android:layout_marginTop="6dp"/>
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1.5">
+        android:layout_weight="1.5"
+        android:background="@drawable/music_controller_background">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <SeekBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:progress="2"
+                android:max="10"
+                android:thumb="@drawable/seekbar_thumb_background"
+                android:progressDrawable="@drawable/seekbar_background"/>
+
+        </RelativeLayout>
 
     </LinearLayout>
 </LinearLayout>

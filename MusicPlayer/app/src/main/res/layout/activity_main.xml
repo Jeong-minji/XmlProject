@@ -20,7 +20,7 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
-                
+
                 <ImageView
                     android:layout_width="30dp"
                     android:layout_height="30dp"
@@ -116,12 +116,12 @@
                     android:layout_alignParentLeft="true"
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="46dp"
-                    android:text="3:01"
+                    android:text="0:00"
                     android:textColor="#A7AAB9"
                     android:textSize="12sp" />
 
                 <TextView
-                    android:id="@+id/time_end"
+                    android:id="@+id/time_current"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
@@ -131,18 +131,19 @@
                     android:textColor="#A7AAB9"
                     android:textSize="12sp" />
 
-                <ProgressBar
-                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                <SeekBar
+                    android:id="@+id/music_progress"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentTop="true"
                     android:max="100"
                     android:progress="50"
-                    android:progressDrawable="@drawable/progressbar_background_second" />
+                    android:progressDrawable="@drawable/music_progress_style"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginBottom="20dp"/>
 
                 <ImageButton
-                    android:id="@+id/btn_pause"
+                    android:id="@+id/btn_start"
                     android:layout_width="60dp"
                     android:layout_height="60dp"
                     android:layout_alignParentBottom="true"
@@ -150,7 +151,7 @@
                     android:layout_marginBottom="4dp"
                     android:background="@drawable/btn_pause_background"
                     android:elevation="8dp"
-                    android:src="@drawable/btn_pause" />
+                    android:src="@drawable/btn_start" />
 
                 <ImageButton
                     android:id="@+id/btn_previous"
@@ -159,7 +160,7 @@
                     android:layout_alignParentBottom="true"
                     android:layout_marginBottom="10dp"
                     android:layout_marginRight="20dp"
-                    android:layout_toLeftOf="@id/btn_pause"
+                    android:layout_toLeftOf="@id/btn_start"
                     android:background="#00000000"
                     android:src="@drawable/btn_previous" />
 
@@ -170,7 +171,7 @@
                     android:layout_alignParentBottom="true"
                     android:layout_marginBottom="10dp"
                     android:layout_marginLeft="20dp"
-                    android:layout_toRightOf="@id/btn_pause"
+                    android:layout_toRightOf="@id/btn_start"
                     android:background="#00000000"
                     android:src="@drawable/btn_next" />
             </RelativeLayout>
@@ -213,8 +214,6 @@
                     android:layout_height="4dp"
                     android:max="100"
                     android:progress="50"
-                    android:progressDrawable="@drawable/seekbar_background"
-                    android:thumb="@drawable/seekbar_thumb"
                     android:layout_centerInParent="true"/>
 
                 <ImageView

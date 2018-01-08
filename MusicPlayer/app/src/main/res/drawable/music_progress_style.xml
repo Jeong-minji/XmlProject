@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--시크바 배경-->
+    <item>
+        <vector
+            android:height="1600dp"
+            android:width="300dp"
+            android:viewportHeight="1600"
+            android:viewportWidth="300">
+
+            <path
+                android:strokeColor="@color/colorAccentLight"
+                android:strokeWidth="55"
+                android:pathData="M20,1120 C95,220 200,220 280, 1130"/>
+
+        </vector>
+    </item>
+
+    <!-- 시크바 프로그래스 -->
+    <item>
+        <clip>
+            <vector
+                android:height="1600dp"
+                android:width="300dp"
+                android:viewportHeight="1600"
+                android:viewportWidth="300">
+
+                <path
+                    android:strokeColor="#ffffff"
+                    android:strokeWidth="55"
+                    android:pathData="M20,1120 C95,220 200,220 280, 1130"/>
+
+            </vector>
+        </clip>
+    </item>
+
+</layer-list>

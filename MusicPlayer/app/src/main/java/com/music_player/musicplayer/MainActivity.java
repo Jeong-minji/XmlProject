@@ -11,6 +11,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.io.IOException;
 
@@ -20,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
     private ImageView volume_down;
     private SeekBar music_progress, volume_controller;
     private MediaPlayer mediaPlayer;
-    private TextView time_current;
+    private TextView time_current, time_final;
     boolean btn_start_boolean;
 
     @Override
@@ -31,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
         btn_start = (ImageButton)findViewById(R.id.btn_start);
         volume_down = (ImageView)findViewById(R.id.volume_down);
         time_current = (TextView)findViewById(R.id.time_current);
+        time_final = (TextView)findViewById(R.id.time_final);
         music_progress = (SeekBar)findViewById(R.id.music_progress);
         volume_controller = (SeekBar)findViewById(R.id.volume_controller);
 
@@ -42,6 +44,8 @@ public class MainActivity extends AppCompatActivity {
 
         music_progress.setThumb(null);
         music_progress.setMax(mediaPlayer.getDuration());         // getDuration은 음악의 전체 길이를 받아옴
+        Log.d("xxx", (mediaPlayer.getDuration())+"");
+        time_final.setText((mediaPlayer.getDuration()/1000/60)+":"+(mediaPlayer.getDuration()/1000%60));
         music_progress.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
@@ -108,6 +112,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 audioManager.setStreamVolume(AudioManager.STREAM_MUSIC, progress, 0);
+
+                if(volume_controller.getProgress()==0) {
+                    volume_down.setImageResource(R.drawable.btn_volume_off);
+                } else {
+                    volume_down.setImageResource(R.drawable.btn_volume_down);
+                }
             }
 
             @Override
@@ -120,10 +130,6 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-
-        if(volume_controller.getProgress() == 0) {
-            volume_down.setImageResource(R.drawable.btn_volume_off);
-        }
 
     }
 

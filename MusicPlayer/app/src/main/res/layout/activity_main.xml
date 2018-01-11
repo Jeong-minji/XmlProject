@@ -75,7 +75,7 @@
             android:id="@+id/music_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Something Just Like This"
+            android:text="Decalcomanie"
             android:textColor="@color/colorWhite"
             android:textSize="20sp"
             android:textStyle="bold"/>
@@ -84,7 +84,7 @@
             android:id="@+id/music_artist"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="The ChainSmokers &amp; Coldplay"
+            android:text="마마무"
             android:textColor="#A7AAB9"
             android:textSize="14sp"
             android:layout_marginTop="6dp"/>
@@ -110,7 +110,7 @@
                 android:layout_height="match_parent">
 
                 <TextView
-                    android:id="@+id/time_start"
+                    android:id="@+id/time_current"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
@@ -121,7 +121,7 @@
                     android:textSize="12sp" />
 
                 <TextView
-                    android:id="@+id/time_current"
+                    android:id="@+id/time_final"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"

@@ -210,13 +210,15 @@
 
                 <SeekBar
                     android:id="@+id/volume_controller"
-                    android:layout_width="200dp"
-                    android:layout_height="4dp"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
                     android:max="100"
                     android:progress="50"
-                    android:layout_centerInParent="true"/>
+                    android:layout_centerInParent="true"
+                    android:progressDrawable="@drawable/volume_seekbar_style"/>
 
                 <ImageView
+                    android:id="@+id/volume_down"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:src="@drawable/btn_volume_down"
@@ -225,6 +227,7 @@
                     android:layout_centerVertical="true"/>
 
                 <ImageView
+                    android:id="@+id/volume_up"
                     android:layout_width="26dp"
                     android:layout_height="26dp"
                     android:src="@drawable/btn_volume_up"

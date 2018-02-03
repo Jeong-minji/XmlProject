@@ -22,6 +22,7 @@ import org.xmlpull.v1.XmlPullParserFactory;
 
 import java.io.StringReader;
 import java.net.URL;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 
 import android.os.AsyncTask;
@@ -41,10 +42,13 @@ import org.xmlpull.v1.XmlPullParserFactory;
 import java.io.StringReader;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Date;
+import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
 
     ImageView gifView;
+    TextView weather_condition, temperature, weather_standard;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,11 +58,22 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         gifView = (ImageView)findViewById(R.id.weather_gif);
+        weather_condition = (TextView)findViewById(R.id.weather_condition);
+        temperature = (TextView)findViewById(R.id.temperature);
+        weather_standard = (TextView)findViewById(R.id.weather_standard);
 
         GlideDrawableImageViewTarget gifImage = new GlideDrawableImageViewTarget(gifView);
-        Glide.with(this).load(R.drawable.rainy).into(gifView);
+
 
         new ReceiveShortWeather().execute();
+    }
+
+    public String getDateString()
+    {
+        SimpleDateFormat df = new SimpleDateFormat("yyyy년 MM월 dd일", Locale.KOREA);
+        String str_date = df.format(new Date());
+
+        return str_date;
     }
 
     @Override
@@ -100,9 +115,31 @@ public class MainActivity extends AppCompatActivity {
                         shortWeathers.get(i).getDay() + "(날짜) " +
                         shortWeathers.get(i).getTemp() + "(온도) " +
                         shortWeathers.get(i).getWfKor() + "(날씨) " +
+                        shortWeathers.get(i).getWs() + "(풍속) " +
+                        shortWeathers.get(i).getPty()+"(강수코드)"+
                         shortWeathers.get(i).getPop() + "(강수량)"+"\n";
             }
-//            textView_shortWeather.setText(data);
+
+            weather_condition.setText(shortWeathers.get(0).getWfKor());
+            temperature.setText(shortWeathers.get(0).getTemp());
+            weather_standard.setText(getDateString()+" "+(Integer.parseInt(shortWeathers.get(0).getHour())-3)+"시 기준");
+
+            if(shortWeathers.get(0).getWfKor().equals("구름 많음")) {
+                Glide.with(getApplicationContext()).load(R.drawable.heavy_cloudy).into(gifView);
+            } else if(shortWeathers.get(0).getWfKor().equals("구름 조금")) {
+                Glide.with(getApplicationContext()).load(R.drawable.light_cloudy).into(gifView);
+            } else if(shortWeathers.get(0).getWfKor().equals("맑음")) {
+                Glide.with(getApplicationContext()).load(R.drawable.sunny).into(gifView);
+            } else if(shortWeathers.get(0).getWfKor().equals("흐림")) {
+                Glide.with(getApplicationContext()).load(R.drawable.overclouy).into(gifView);
+            } else if((shortWeathers.get(0).getPty() == 1)||(shortWeathers.get(0).getPty() == 2)) {
+                Glide.with(getApplicationContext()).load(R.drawable.rainy).into(gifView);
+            } else if((shortWeathers.get(0).getPty() == 3)) {
+                Glide.with(getApplicationContext()).load(R.drawable.light_snowy).into(gifView);
+            } else if((shortWeathers.get(0).getPty() == 4)) {
+                Glide.with(getApplicationContext()).load(R.drawable.heavy_snowny).into(gifView);
+            }
+
         }
 
         void parseXML(String xml) {

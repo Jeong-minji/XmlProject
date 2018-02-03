@@ -11,8 +11,26 @@ public class ShortWeather {
     private String wfKor; // 상태
     private String pop; // 강수확률
     private String reh; // 습도
-    private String tmx;
-    private String tmn;
+    private String tmx; // 최고기온
+    private String tmn; // 최저기온
+    private String ws;  // 풍속
+    private int pty;    // 강수코드
+
+    public int getPty() {
+        return pty;
+    }
+
+    public void setPty(int pty) {
+        this.pty = pty;
+    }
+
+    public String getWs() {
+        return ws;
+    }
+
+    public void setWs(String ws) {
+        this.ws = ws;
+    }
 
     public String getTmx() {
         return tmx;

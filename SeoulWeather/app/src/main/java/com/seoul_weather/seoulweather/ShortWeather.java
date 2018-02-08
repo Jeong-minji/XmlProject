@@ -5,6 +5,7 @@ package com.seoul_weather.seoulweather;
  */
 
 public class ShortWeather {
+    private String category;    // 위치
     private String hour;  // 시간
     private String day;    // 날짜
     private String temp;  // 온도
@@ -14,13 +15,21 @@ public class ShortWeather {
     private String tmx; // 최고기온
     private String tmn; // 최저기온
     private String ws;  // 풍속
-    private int pty;    // 강수코드
+    private String pty;    // 강수코드
 
-    public int getPty() {
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
+
+    public String getPty() {
         return pty;
     }
 
-    public void setPty(int pty) {
+    public void setPty(String pty) {
         this.pty = pty;
     }
 
